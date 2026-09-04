@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення товару</title>
+</head>
+<body>
+
+<h1>Форма замовлення товару</h1>
+
+<form>
+
+    <label for="name">Ім'я:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="surname">Прізвище:</label><br>
+    <input type="text" id="surname" name="surname" required><br><br>
+
+    <label for="email">Електронна пошта:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Номер телефону:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="quantity">Кількість товару:</label><br>
+    <input type="number" id="quantity" name="quantity"
+           min="1" max="10" required><br><br>
+
+    <label for="address">Адреса доставки:</label><br>
+    <input type="text" id="address" name="address"
+           minlength="10" required><br><br>
+
+    <p><b>Спосіб доставки:</b></p>
+
+    <input type="radio" id="pickup" name="delivery" value="Самовивіз" required>
+    <label for="pickup">Самовивіз</label><br>
+
+    <input type="radio" id="locker" name="delivery" value="Поштомат">
+    <label for="locker">Поштомат</label><br>
+
+    <input type="radio" id="courier" name="delivery" value="Кур'єр">
+    <label for="courier">Кур'єр</label><br><br>
+
+    <p><b>Додаткові параметри:</b></p>
+
+    <input type="checkbox" id="gift" name="gift">
+    <label for="gift">Подарункова упаковка</label><br>
+
+    <input type="checkbox" id="warranty" name="warranty">
+    <label for="warranty">Додаткова гарантія</label><br>
+
+    <input type="checkbox" id="sms" name="sms">
+    <label for="sms">SMS-повідомлення</label><br>
+
+    <input type="checkbox" id="call" name="call">
+    <label for="call">Телефонний дзвінок перед доставкою</label><br><br>
+
+    <label for="payment"><b>Спосіб оплати:</b></label><br>
+    <select id="payment" name="payment" required>
+        <option value="">Оберіть спосіб оплати</option>
+        <option value="card">Оплата карткою</option>
+        <option value="cash">Оплата при отриманні</option>
+        <option value="bank">Банківський переказ</option>
+    </select><br><br>
+
+    <label for="comment">Коментар до замовлення:</label><br>
+    <textarea id="comment" name="comment"
+              maxlength="200" rows="5" cols="40"></textarea><br><br>
+
+    <button type="submit">Оформити замовлення</button>
+    <button type="reset">Очистити</button>
+
+</form>
+
+</body>
+</html>
